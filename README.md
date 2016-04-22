@@ -7,7 +7,7 @@ btcutil
 (https://coveralls.io/r/btcsuite/btcutil?branch=master) [![ISC License]
 (http://img.shields.io/badge/license-ISC-blue.svg)](http://copyfree.org)
 [![GoDoc](http://img.shields.io/badge/godoc-reference-blue.svg)]
-(http://godoc.org/github.com/btcsuite/btcutil)
+(http://godoc.org/github.com/jadeblaquiere/btcutil)
 
 Package btcutil provides bitcoin-specific convenience functions and types.
 A comprehensive suite of tests is provided to ensure proper functionality.  See
@@ -24,7 +24,7 @@ provided.
 ## Installation and Updating
 
 ```bash
-$ go get -u github.com/btcsuite/btcutil
+$ go get -u github.com/jadeblaquiere/btcutil
 ```
 
 ## GPG Verification Key
