@@ -11,7 +11,7 @@ import (
 	"bytes"
 	"sort"
 
-	"github.com/jadeblaquiere/btcd/wire"
+	"github.com/jadeblaquiere/ctcd/wire"
 )
 
 // InPlaceSort modifies the passed transaction inputs and outputs to be sorted

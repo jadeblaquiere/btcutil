@@ -8,9 +8,9 @@ import (
 	"encoding/hex"
 	"errors"
 
-	"github.com/jadeblaquiere/btcd/btcec"
-	"github.com/jadeblaquiere/btcd/chaincfg"
-	"github.com/jadeblaquiere/btcutil/base58"
+	"github.com/jadeblaquiere/ctcd/btcec"
+	"github.com/jadeblaquiere/ctcd/chaincfg"
+	"github.com/jadeblaquiere/ctcutil/base58"
 	"github.com/btcsuite/golangcrypto/ripemd160"
 )
 

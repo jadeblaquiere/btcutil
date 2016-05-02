@@ -9,8 +9,8 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/jadeblaquiere/btcd/wire"
-	"github.com/jadeblaquiere/btcutil/bloom"
+	"github.com/jadeblaquiere/ctcd/wire"
+	"github.com/jadeblaquiere/ctcutil/bloom"
 )
 
 // This example demonstrates how to create a new bloom filter, add a transaction

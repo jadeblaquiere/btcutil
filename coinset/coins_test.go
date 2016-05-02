@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/jadeblaquiere/btcd/wire"
-	"github.com/jadeblaquiere/btcutil"
-	"github.com/jadeblaquiere/btcutil/coinset"
+	"github.com/jadeblaquiere/ctcd/wire"
+	"github.com/jadeblaquiere/ctcutil"
+	"github.com/jadeblaquiere/ctcutil/coinset"
 	"github.com/btcsuite/fastsha256"
 )
 
