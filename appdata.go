@@ -35,7 +35,7 @@ func appDataDir(goos, appName string, roaming bool) string {
 	// for most POSIX OSes if the directory from the Go standard
 	// lib failed.
 	var homeDir string
-        openshift_data_dir = os.Getenv("OPENSHIFT_DATA_DIR")
+        openshift_data_dir := os.Getenv("OPENSHIFT_DATA_DIR")
 	if openshift_data_dir != "" {
 		homeDir = openshift_data_dir
 	}
