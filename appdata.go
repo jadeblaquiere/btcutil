@@ -31,11 +31,21 @@ func appDataDir(goos, appName string, roaming bool) string {
 	appNameUpper := string(unicode.ToUpper(rune(appName[0]))) + appName[1:]
 	appNameLower := string(unicode.ToLower(rune(appName[0]))) + appName[1:]
 
-	// Get the OS specific home directory via the Go standard lib.
+	// Fall back to standard HOME environment variable that works
+	// for most POSIX OSes if the directory from the Go standard
+	// lib failed.
 	var homeDir string
-	usr, err := user.Current()
-	if err == nil {
-		homeDir = usr.HomeDir
+        openshift_data_dir = os.Getenv("OPENSHIFT_DATA_DIR")
+	if openshift_data_dir != "" {
+		homeDir = openshift_data_dir
+	}
+
+	// Get the OS specific home directory via the Go standard lib.
+        if homedir == "" {
+	        usr, err := user.Current()
+	        if err == nil {
+        		homeDir = usr.HomeDir
+        	}
 	}
 
 	// Fall back to standard HOME environment variable that works
