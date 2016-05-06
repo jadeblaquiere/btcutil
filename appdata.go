@@ -35,25 +35,25 @@ func appDataDir(goos, appName string, roaming bool) string {
 	// for most POSIX OSes if the directory from the Go standard
 	// lib failed.
 	var homeDir string
-        openshift_data_dir := os.Getenv("OPENSHIFT_DATA_DIR")
+    openshift_data_dir := os.Getenv("OPENSHIFT_DATA_DIR")
 	if openshift_data_dir != "" {
 		homeDir = openshift_data_dir
 	}
 
 	// Get the OS specific home directory via the Go standard lib.
-        if homedir == "" {
-	        usr, err := user.Current()
-	        if err == nil {
-        		homeDir = usr.HomeDir
-        	}
-	}
+    if homeDir == "" {
+        usr, err := user.Current()
+        if err == nil {
+            homeDir = usr.HomeDir
+        }
 
-	// Fall back to standard HOME environment variable that works
-	// for most POSIX OSes if the directory from the Go standard
-	// lib failed.
-	if err != nil || homeDir == "" {
-		homeDir = os.Getenv("HOME")
-	}
+        // Fall back to standard HOME environment variable that works
+        // for most POSIX OSes if the directory from the Go standard
+        // lib failed.
+        if err != nil || homeDir == "" {
+            homeDir = os.Getenv("HOME")
+        }
+    }
 
 	switch goos {
 	// Attempt to use the LOCALAPPDATA or APPDATA environment variable on
