@@ -9,9 +9,15 @@ import (
 	"math/rand"
 	"time"
 
+<<<<<<< HEAD
 	"github.com/jadeblaquiere/ctcd/chaincfg/chainhash"
 	"github.com/jadeblaquiere/ctcd/wire"
 	"github.com/jadeblaquiere/ctcutil/bloom"
+=======
+	"github.com/btcsuite/btcd/chaincfg/chainhash"
+	"github.com/btcsuite/btcd/wire"
+	"github.com/btcsuite/btcutil/bloom"
+>>>>>>> btcsuite/master
 )
 
 // This example demonstrates how to create a new bloom filter, add a transaction

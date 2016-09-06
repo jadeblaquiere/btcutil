@@ -10,8 +10,13 @@ import (
 	"reflect"
 	"testing"
 
+<<<<<<< HEAD
 	"github.com/jadeblaquiere/ctcd/chaincfg/chainhash"
 	"github.com/jadeblaquiere/ctcutil"
+=======
+	"github.com/btcsuite/btcd/chaincfg/chainhash"
+	"github.com/btcsuite/btcutil"
+>>>>>>> btcsuite/master
 	"github.com/davecgh/go-spew/spew"
 )
 

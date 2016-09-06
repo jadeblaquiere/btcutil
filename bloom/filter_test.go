@@ -9,10 +9,17 @@ import (
 	"encoding/hex"
 	"testing"
 
+<<<<<<< HEAD
 	"github.com/jadeblaquiere/ctcd/chaincfg/chainhash"
 	"github.com/jadeblaquiere/ctcd/wire"
 	"github.com/jadeblaquiere/ctcutil"
 	"github.com/jadeblaquiere/ctcutil/bloom"
+=======
+	"github.com/btcsuite/btcd/chaincfg/chainhash"
+	"github.com/btcsuite/btcd/wire"
+	"github.com/btcsuite/btcutil"
+	"github.com/btcsuite/btcutil/bloom"
+>>>>>>> btcsuite/master
 )
 
 // TestFilterLarge ensures a maximum sized filter can be created.
