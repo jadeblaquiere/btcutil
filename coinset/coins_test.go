@@ -10,15 +10,9 @@ import (
 	"fmt"
 	"testing"
 
-<<<<<<< HEAD
 	"github.com/jadeblaquiere/ctcd/chaincfg/chainhash"
 	"github.com/jadeblaquiere/ctcutil"
 	"github.com/jadeblaquiere/ctcutil/coinset"
-=======
-	"github.com/btcsuite/btcd/chaincfg/chainhash"
-	"github.com/btcsuite/btcutil"
-	"github.com/btcsuite/btcutil/coinset"
->>>>>>> btcsuite/master
 	"github.com/btcsuite/fastsha256"
 )
 
