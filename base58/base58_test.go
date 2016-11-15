@@ -9,7 +9,7 @@ import (
 	"encoding/hex"
 	"testing"
 
-	"github.com/jadeblaquiere/ctcutil/base58"
+	"github.com/jadeblaquiere/cttutil/base58"
 )
 
 var stringTests = []struct {

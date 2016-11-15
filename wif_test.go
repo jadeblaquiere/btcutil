@@ -2,14 +2,14 @@
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
-package btcutil_test
+package cttutil_test
 
 import (
 	"testing"
 
-	"github.com/jadeblaquiere/ctcd/btcec"
-	"github.com/jadeblaquiere/ctcd/chaincfg"
-	. "github.com/jadeblaquiere/ctcutil"
+	"github.com/jadeblaquiere/cttd/btcec"
+	"github.com/jadeblaquiere/cttd/chaincfg"
+	. "github.com/jadeblaquiere/cttutil"
 )
 
 func TestEncodeDecodeWIF(t *testing.T) {
