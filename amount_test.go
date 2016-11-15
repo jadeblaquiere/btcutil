@@ -121,28 +121,28 @@ func TestAmountUnitConversions(t *testing.T) {
 		{
 			name:      "MBTC",
 			amount:    MaxSatoshi,
-			unit:      AmountMegaBTC,
+			unit:      AmountMegaCTT,
 			converted: 21,
 			s:         "21 MBTC",
 		},
 		{
 			name:      "kBTC",
 			amount:    44433322211100,
-			unit:      AmountKiloBTC,
+			unit:      AmountKiloCTT,
 			converted: 444.33322211100,
 			s:         "444.333222111 kBTC",
 		},
 		{
 			name:      "BTC",
 			amount:    44433322211100,
-			unit:      AmountBTC,
+			unit:      AmountCTT,
 			converted: 444333.22211100,
 			s:         "444333.222111 BTC",
 		},
 		{
 			name:      "mBTC",
 			amount:    44433322211100,
-			unit:      AmountMilliBTC,
+			unit:      AmountMilliCTT,
 			converted: 444333222.11100,
 			s:         "444333222.111 mBTC",
 		},
@@ -150,7 +150,7 @@ func TestAmountUnitConversions(t *testing.T) {
 
 			name:      "μBTC",
 			amount:    44433322211100,
-			unit:      AmountMicroBTC,
+			unit:      AmountMicroCTT,
 			converted: 444333222111.00,
 			s:         "444333222111 μBTC",
 		},
@@ -158,7 +158,7 @@ func TestAmountUnitConversions(t *testing.T) {
 
 			name:      "satoshi",
 			amount:    44433322211100,
-			unit:      AmountSatoshi,
+			unit:      AmountMystiko,
 			converted: 44433322211100,
 			s:         "44433322211100 Satoshi",
 		},
@@ -186,14 +186,14 @@ func TestAmountUnitConversions(t *testing.T) {
 		}
 
 		// Verify that Amount.ToBTC works as advertised.
-		f1 := test.amount.ToUnit(AmountBTC)
+		f1 := test.amount.ToUnit(AmountCTT)
 		f2 := test.amount.ToBTC()
 		if f1 != f2 {
-			t.Errorf("%v: ToBTC does not match ToUnit(AmountBTC): %v != %v", test.name, f1, f2)
+			t.Errorf("%v: ToBTC does not match ToUnit(AmountCTT): %v != %v", test.name, f1, f2)
 		}
 
 		// Verify that Amount.String works as advertised.
-		s1 := test.amount.Format(AmountBTC)
+		s1 := test.amount.Format(AmountCTT)
 		s2 := test.amount.String()
 		if s1 != s2 {
 			t.Errorf("%v: String does not match Format(AmountBitcoin): %v != %v", test.name, s1, s2)

@@ -61,11 +61,11 @@ func ExampleNewAmount() {
 func ExampleAmount_unitConversions() {
 	amount := btcutil.Amount(44433322211100)
 
-	fmt.Println("Satoshi to kBTC:", amount.Format(btcutil.AmountKiloBTC))
+	fmt.Println("Satoshi to kBTC:", amount.Format(btcutil.AmountKiloCTT))
 	fmt.Println("Satoshi to BTC:", amount)
-	fmt.Println("Satoshi to MilliBTC:", amount.Format(btcutil.AmountMilliBTC))
-	fmt.Println("Satoshi to MicroBTC:", amount.Format(btcutil.AmountMicroBTC))
-	fmt.Println("Satoshi to Satoshi:", amount.Format(btcutil.AmountSatoshi))
+	fmt.Println("Satoshi to MilliBTC:", amount.Format(btcutil.AmountMilliCTT))
+	fmt.Println("Satoshi to MicroBTC:", amount.Format(btcutil.AmountMicroCTT))
+	fmt.Println("Satoshi to Satoshi:", amount.Format(btcutil.AmountMystiko))
 
 	// Output:
 	// Satoshi to kBTC: 444.333222111 kBTC

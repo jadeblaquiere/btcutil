@@ -19,12 +19,12 @@ type AmountUnit int
 // These constants define various units used when describing a bitcoin
 // monetary amount.
 const (
-	AmountMegaBTC  AmountUnit = 6
-	AmountKiloBTC  AmountUnit = 3
-	AmountBTC      AmountUnit = 0
-	AmountMilliBTC AmountUnit = -3
-	AmountMicroBTC AmountUnit = -6
-	AmountSatoshi  AmountUnit = -8
+	AmountMegaCTT  AmountUnit = 6
+	AmountKiloCTT  AmountUnit = 3
+	AmountCTT      AmountUnit = 0
+	AmountMilliCTT AmountUnit = -3
+	AmountMicroCTT AmountUnit = -6
+	AmountMystiko  AmountUnit = -8
 )
 
 // String returns the unit as a string.  For recognized units, the SI
@@ -32,17 +32,17 @@ const (
 // units, "1eN BTC" is returned, where N is the AmountUnit.
 func (u AmountUnit) String() string {
 	switch u {
-	case AmountMegaBTC:
-		return "MCTC"
-	case AmountKiloBTC:
-		return "kCTC"
-	case AmountBTC:
-		return "CTC"
-	case AmountMilliBTC:
-		return "mCTC"
-	case AmountMicroBTC:
-		return "μCTC"
-	case AmountSatoshi:
+	case AmountMegaCTT:
+		return "MCTT"
+	case AmountKiloCTT:
+		return "kCTT"
+	case AmountCTT:
+		return "CTT"
+	case AmountMilliCTT:
+		return "mCTT"
+	case AmountMicroCTT:
+		return "μCTT"
+	case AmountMystiko:
 		return "Mystiko"
 	default:
 		return "1e" + strconv.FormatInt(int64(u), 10) + " BTC"
@@ -94,9 +94,9 @@ func (a Amount) ToUnit(u AmountUnit) float64 {
 	return float64(a) / math.Pow10(int(u+8))
 }
 
-// ToBTC is the equivalent of calling ToUnit with AmountBTC.
+// ToBTC is the equivalent of calling ToUnit with AmountCTT.
 func (a Amount) ToBTC() float64 {
-	return a.ToUnit(AmountBTC)
+	return a.ToUnit(AmountCTT)
 }
 
 // Format formats a monetary amount counted in bitcoin base units as a
@@ -108,9 +108,9 @@ func (a Amount) Format(u AmountUnit) string {
 	return strconv.FormatFloat(a.ToUnit(u), 'f', -int(u+8), 64) + units
 }
 
-// String is the equivalent of calling Format with AmountBTC.
+// String is the equivalent of calling Format with AmountCTT.
 func (a Amount) String() string {
-	return a.Format(AmountBTC)
+	return a.Format(AmountCTT)
 }
 
 // MulF64 multiplies an Amount by a floating point value.  While this is not
