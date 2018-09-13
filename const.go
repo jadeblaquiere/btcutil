@@ -5,12 +5,12 @@
 package btcutil
 
 const (
-	// SatoshiPerBitcent is the number of satoshi in one bitcoin cent.
-	SatoshiPerBitcent = 1e6
+	// MystikoPerBitcent is the number of satoshi in one bitcoin cent.
+	MystikoPerBitcent = 1e6
 
-	// SatoshiPerBitcoin is the number of satoshi in one bitcoin (1 BTC).
-	SatoshiPerBitcoin = 1e8
+	// MystikoPerBitcoin is the number of satoshi in one bitcoin (1 CTT).
+	MystikoPerBitcoin = 1e8
 
-	// MaxSatoshi is the maximum transaction amount allowed in satoshi.
-	MaxSatoshi = 21e6 * SatoshiPerBitcoin
+	// MaxMystiko is the maximum transaction amount allowed in satoshi.
+	MaxMystiko = 21e6 * MystikoPerBitcoin
 )

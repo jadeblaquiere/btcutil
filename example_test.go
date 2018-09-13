@@ -10,17 +10,17 @@ import (
 func ExampleAmount() {
 
 	a := btcutil.Amount(0)
-	fmt.Println("Zero Satoshi:", a)
+	fmt.Println("Zero Mystiko:", a)
 
 	a = btcutil.Amount(1e8)
-	fmt.Println("100,000,000 Satoshis:", a)
+	fmt.Println("100,000,000 Mystikos:", a)
 
 	a = btcutil.Amount(1e5)
-	fmt.Println("100,000 Satoshis:", a)
+	fmt.Println("100,000 Mystikos:", a)
 	// Output:
-	// Zero Satoshi: 0 BTC
-	// 100,000,000 Satoshis: 1 BTC
-	// 100,000 Satoshis: 0.001 BTC
+	// Zero Mystiko: 0 CTT
+	// 100,000,000 Mystikos: 1 CTT
+	// 100,000 Mystikos: 0.001 CTT
 }
 
 func ExampleNewAmount() {
@@ -52,25 +52,25 @@ func ExampleNewAmount() {
 	}
 	fmt.Println(amountNaN) //Output 4
 
-	// Output: 1 BTC
-	// 0.01234567 BTC
-	// 0 BTC
+	// Output: 1 CTT
+	// 0.01234567 CTT
+	// 0 CTT
 	// invalid bitcoin amount
 }
 
 func ExampleAmount_unitConversions() {
 	amount := btcutil.Amount(44433322211100)
 
-	fmt.Println("Satoshi to kBTC:", amount.Format(btcutil.AmountKiloBTC))
-	fmt.Println("Satoshi to BTC:", amount)
-	fmt.Println("Satoshi to MilliBTC:", amount.Format(btcutil.AmountMilliBTC))
-	fmt.Println("Satoshi to MicroBTC:", amount.Format(btcutil.AmountMicroBTC))
-	fmt.Println("Satoshi to Satoshi:", amount.Format(btcutil.AmountSatoshi))
+	fmt.Println("Mystiko to kCTT:", amount.Format(btcutil.AmountKiloCTT))
+	fmt.Println("Mystiko to CTT:", amount)
+	fmt.Println("Mystiko to MilliCTT:", amount.Format(btcutil.AmountMilliCTT))
+	fmt.Println("Mystiko to MicroCTT:", amount.Format(btcutil.AmountMicroCTT))
+	fmt.Println("Mystiko to Mystiko:", amount.Format(btcutil.AmountMystiko))
 
 	// Output:
-	// Satoshi to kBTC: 444.333222111 kBTC
-	// Satoshi to BTC: 444333.222111 BTC
-	// Satoshi to MilliBTC: 444333222.111 mBTC
-	// Satoshi to MicroBTC: 444333222111 μBTC
-	// Satoshi to Satoshi: 44433322211100 Satoshi
+	// Mystiko to kCTT: 444.333222111 kCTT
+	// Mystiko to CTT: 444333.222111 CTT
+	// Mystiko to MilliCTT: 444333222.111 mCTT
+	// Mystiko to MicroCTT: 444333222111 μCTT
+	// Mystiko to Mystiko: 44433322211100 Mystiko
 }
